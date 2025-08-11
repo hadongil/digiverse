@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #FFD700; /* Bright Yellow */
+    --secondary-color: #000000; /* Black */
+    --background-color: #FFFFFF; /* White */
+    --text-color: #000000;
+    --subtle-text-color: #555555;
+    --border-color: #EEEEEE;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    word-break: keep-all;
+    letter-spacing: -0.5px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Anton', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: none;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    background: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding: 0.5rem 0;
+}
+
+.navbar-brand {
+    font-size: 2.2rem;
+    color: var(--secondary-color) !important;
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    color: var(--secondary-color) !important;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+#home.carousel {
+    height: 100vh;
+}
+
+.carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.carousel-caption {
+    z-index: 1;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.carousel-caption h1 {
+    font-size: 8rem;
+    line-height: 1;
+    color: #fff;
+}
+
+.carousel-caption p {
+    color: #fff;
+}
+
+.section-padding {
+    padding: 10rem 0;
+}
+
+.bg-white {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.bg-black {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+.bg-yellow {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.section-title {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+}
+
+.bg-black .section-title {
+    color: var(--primary-color);
+}
+
+.card {
+    background: transparent;
+    border: 2px solid;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 2rem; /* Add margin to the bottom */
+}
+
+.bg-white .card {
+    border-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.bg-black .card {
+    border-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.bg-yellow .card {
+    border-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.card h4, .card h5 {
+    color: var(--primary-color);
+}
+
+.bg-white .card h4, .bg-white .card h5 {
+    color: var(--text-color);
+}
+
+.bg-yellow .card h4, .bg-yellow .card h5 {
+    color: var(--text-color);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover .overlay {
+    transform: translateY(0);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color) !important;
+    padding: 4rem 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--secondary-color) !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal-content {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 0;
+    color: var(--background-color);
+}
+
+.modal-header {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.nav-tabs .nav-link {
+    color: var(--subtle-text-color) !important;
+    border: none;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-color) !important;
+    border-bottom-color: var(--primary-color);
+    background-color: transparent;
+}
+
+#contact .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.25rem 0;
+    }
+
+    .navbar .container {
+        position: relative;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 1.8rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    #home.carousel,
+    .carousel-item {
+        height: 70vh;
+    }
+
+    .carousel-caption h1 {
+        font-size: 4rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .section-padding {
+        padding: 5rem 0;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #about .card, #team .card {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 2rem;
+        text-align: center;
+        height: auto !important;
+    }
+
+    #contact h3 {
+        font-size: 1.125rem;
+    }
+    #contact p {
+        font-size: 0.9rem;
+    }
+
+    #team .lead {
+        font-size: 1.125rem;
+    }
+
+    #about .lead {
+        font-size: 1.125rem;
+    }
+}
+
+.navbar-toggler-icon {
+    width: 1em;
+    height: 1em;
+}
+
+#contact p, #contact h3 {
+    color: #E0E0E0;
+}
+
+.strong-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
